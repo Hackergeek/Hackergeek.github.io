@@ -20,20 +20,20 @@
     
     
     <meta name="keywords" content="Java,Android">
-    <meta name="description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
+    <meta name="description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。  去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。 不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。  控制日志输出我们可以通过使用控制语句来控制日志">
 <meta name="keywords" content="Java,Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="控制日志输出">
 <meta property="og:url" content="https://hackergeek.github.io/2018/03/31/2018-3-31/index.html">
 <meta property="og:site_name" content="知用改创的个人博客">
-<meta property="og:description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
+<meta property="og:description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。  去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。 不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。  控制日志输出我们可以通过使用控制语句来控制日志">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://hackergeek.github.io/2018/03/31/2018-3-31/Main.java.png">
 <meta property="og:image" content="https://hackergeek.github.io/2018/03/31/2018-3-31/Main.class.png">
-<meta property="og:updated_time" content="2018-04-01T05:43:09.828Z">
+<meta property="og:updated_time" content="2018-04-01T05:50:17.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="控制日志输出">
-<meta name="twitter:description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
+<meta name="twitter:description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。  去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。 不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。  控制日志输出我们可以通过使用控制语句来控制日志">
 <meta name="twitter:image" content="https://hackergeek.github.io/2018/03/31/2018-3-31/Main.java.png">
     
         <link rel="alternate" type="application/atom+xml" title="知用改创的个人博客" href="/atom.xml">
@@ -187,18 +187,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <ol>
-<li>Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。</li>
-<li>尽量使用静态布尔型常量来控制日志输出。</li>
-</ol>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。<br>但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。<br>如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，<br>而且删除输出日志的代码也不是一件轻松的事情。<br>但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</p>
+            <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。</p>
+<ul>
+<li>去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。</li>
+<li>不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</li>
+</ul>
 <h2 id="控制日志输出"><a href="#控制日志输出" class="headerlink" title="控制日志输出"></a>控制日志输出</h2><p>我们可以通过使用控制语句来控制日志输出，下面的代码分别使用布尔型常量和布尔型变量来控制日志输出：</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/2018/03/31/2018-3-31/Main.java.png" alt="Main.class" title="">
+                    <img src="/2018/03/31/2018-3-31/Main.java.png" alt="Main.java" title="">
                 </div>
-                <div class="image-caption">Main.class</div>
+                <div class="image-caption">Main.java</div>
             </figure>
 <p>那么<strong>使用布尔型常量和布尔型变量控制日志输出有什么区别</strong>呢？<br>于是，我就去查看Main.java编译生成的字节码（进行反编译处理之后的字节码），如下图：</p>
 <figure class="image-bubble">
@@ -208,8 +208,12 @@
                 </div>
                 <div class="image-caption">Main.class</div>
             </figure>
-<p>将编译生成的字节码和源码进行对比，你会发现由于DEBUG常量的值为true，<br>也就是说第11行else语句块永远都不会执行，因此Java编译器就将它忽略掉，<br>最终第9-13行的java代码编译生成第16行的字节码。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由此可见，Java编译器在将java代码编译成java字节码的时候，<br>会忽略掉那些永远都不可能执行的代码。<br>利用这一点，首先我们定义一个布尔型常量，<br>然后在那些输出日志的代码之前加上if控制语句。<br>这样我们就可以通过更改这个布尔型常量的值来控制程序的日志输出了。</p>
+<p>将编译生成的字节码和源码进行对比，你会发现由于DEBUG常量的值为true，也就是说第11行else语句块永远都不会执行，因此Java编译器就将它忽略掉，最终第9-13行的java代码编译生成第16行的字节码。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从上面的分析，我们可以得出以下结论：</p>
+<ol>
+<li>Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。</li>
+<li>尽量使用静态布尔型常量来控制日志输出。</li>
+</ol>
 
         </div>
 
@@ -217,7 +221,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-04-01T05:43:09.828Z" itemprop="dateUpdated">2018-04-01 13:43:09</time>
+    最后更新时间：<time datetime="2018-04-01T05:50:17.094Z" itemprop="dateUpdated">2018-04-01 13:50:17</time>
 </span><br>
 
 
