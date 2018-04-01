@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="Java,Android">
-    <meta name="description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。 控制日志输出我们可以通过使用控制语句来控">
+    <meta name="description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
 <meta name="keywords" content="Java,Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="控制日志输出">
 <meta property="og:url" content="https://hackergeek.github.io/2018/03/31/2018-3-31/index.html">
 <meta property="og:site_name" content="知用改创的个人博客">
-<meta property="og:description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。 控制日志输出我们可以通过使用控制语句来控">
+<meta property="og:description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-31T16:20:26.160Z">
+<meta property="og:updated_time" content="2018-03-31T16:54:25.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="控制日志输出">
-<meta name="twitter:description" content="背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。 控制日志输出我们可以通过使用控制语句来控">
+<meta name="twitter:description" content="Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。 尽量使用静态布尔型常量来控制日志输出。  背景在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也">
     
         <link rel="alternate" type="application/atom+xml" title="知用改创的个人博客" href="/atom.xml">
     
@@ -184,15 +184,15 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。<br>但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。<br>如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，<br>而且删除输出日志的代码也不是一件轻松的事情。<br>但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</p>
-<h2 id="控制日志输出"><a href="#控制日志输出" class="headerlink" title="控制日志输出"></a>控制日志输出</h2><p>我们可以通过使用控制语句来控制日志输出，下面的代码分别使用布尔型常量和布尔型变量来控制日志输出：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.company;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> DEBUG = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> debug;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="comment">// write your code here</span></div><div class="line">        <span class="keyword">if</span> (DEBUG) &#123;</div><div class="line">            System.out.println(<span class="string">"DEBUG"</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            System.out.println(<span class="string">"NO DEBUG"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (debug) &#123;</div><div class="line">            System.out.println(<span class="string">"debug"</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            System.out.println(<span class="string">"no debug"</span>);</div><div class="line">        &#125;</div><div class="line">        System.out.println(<span class="string">"test"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>那么使用布尔型常量和布尔型变量控制日志输出有什么区别呢？<br>通过对<br>使用布尔型常量</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由此可见，Java编译器在将java代码编译成java字节码的时候，<br>会忽略掉那些永远都不可能执行的代码。<br>利用这一点，首先我们定义一个布尔型常量，<br>然后在那些输出日志的代码之前加上if控制语句。<br>这样我们就可以通过更改这个布尔型常量的值来控制程序的日志输出了。</p>
-<ol>
+            <ol>
 <li>Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。</li>
 <li>尽量使用静态布尔型常量来控制日志输出。</li>
 </ol>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。<br>但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。<br>如果去掉的话，就会担心当程序出问题的时候，又要重新加入那些代码来调试，<br>而且删除输出日志的代码也不是一件轻松的事情。<br>但是如果不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</p>
+<h2 id="控制日志输出"><a href="#控制日志输出" class="headerlink" title="控制日志输出"></a>控制日志输出</h2><p>我们可以通过使用控制语句来控制日志输出，下面的代码分别使用布尔型常量和布尔型变量来控制日志输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> DEBUG = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> debug;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (DEBUG) &#123;</span><br><span class="line">            System.out.println(<span class="string">"DEBUG"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"NO DEBUG"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (debug) &#123;</span><br><span class="line">            System.out.println(<span class="string">"debug"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"no debug"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"test"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么使用布尔型常量和布尔型变量控制日志输出有什么区别呢？<br>通过对<br>使用布尔型常量</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由此可见，Java编译器在将java代码编译成java字节码的时候，<br>会忽略掉那些永远都不可能执行的代码。<br>利用这一点，首先我们定义一个布尔型常量，<br>然后在那些输出日志的代码之前加上if控制语句。<br>这样我们就可以通过更改这个布尔型常量的值来控制程序的日志输出了。</p>
 
         </div>
 
@@ -200,7 +200,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-31T16:20:26.160Z" itemprop="dateUpdated">2018-04-01 00:20:26</time>
+    最后更新时间：<time datetime="2018-03-31T16:54:25.690Z" itemprop="dateUpdated">2018-04-01 00:54:25</time>
 </span><br>
 
 
@@ -280,7 +280,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/01/2018-4-1/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hexo搭建个人博客的过程</h4>
+      </a>
+    </div>
   
 
   
