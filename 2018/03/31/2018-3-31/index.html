@@ -294,7 +294,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2018/03/31/hello-world/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Hello World</h4>
+        <h4 class="title">快速配置Hexo</h4>
       </a>
     </div>
   
@@ -310,6 +310,23 @@
 
 
 
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'Hackergeek',
+            repo: 'https://github.com/Hackergeek/Hackergeek.github.io',
+            oauth: {
+                client_id: '7b06e1fb9bc5eb3ecee4',
+                client_secret: 'c4b516e3994559b372bfa464cfa2a35d69847fa7',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
 
 
 
