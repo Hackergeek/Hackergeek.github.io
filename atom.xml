@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hackergeek.github.io/"/>
-  <updated>2018-05-30T13:12:26.924Z</updated>
+  <updated>2018-05-30T13:17:22.252Z</updated>
   <id>https://hackergeek.github.io/</id>
   
   <author>
@@ -20,47 +20,23 @@
     <title>浅谈Android文件管理器的几种实现方式（源码篇）</title>
     <link href="https://hackergeek.github.io/2018/04/14/%E6%B5%85%E8%B0%88Android%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%EF%BC%88%E6%BA%90%E7%A0%81%E7%AF%87%EF%BC%89/"/>
     <id>https://hackergeek.github.io/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/</id>
-    <published>2018-04-14T08:36:44.241Z</published>
-    <updated>2018-05-30T13:12:26.924Z</updated>
+    <published>2018-04-13T16:00:00.000Z</published>
+    <updated>2018-05-30T13:17:22.252Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="浅谈Android文件管理器的几种实现方式（源码篇）"><a href="#浅谈Android文件管理器的几种实现方式（源码篇）" class="headerlink" title="浅谈Android文件管理器的几种实现方式（源码篇）"></a>浅谈Android文件管理器的几种实现方式（源码篇）</h1><h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><ul><li>基本文件操作：新建、复制、粘贴、剪切和删除等操作</li><li>文件检索</li><li>文件收藏</li><li>文件分类</li><li>添加桌面快捷方式</li><li>主题换色</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p> <img src="/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/文件管理器效果图.gif" width="400" height="600" alt="图片名称" align="center"></p><h2 id="Android简单文件管理器源码"><a href="#Android简单文件管理器源码" class="headerlink" title="Android简单文件管理器源码"></a><a href="https://github.com/Hackergeek/SimpleExplorer2" title="Android简单文件管理器源码" target="_blank" rel="noopener">Android简单文件管理器源码</a></h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/6e51a11a52d9" title="浅谈Android文件管理器的几种实现方式" target="_blank" rel="noopener">浅谈Android文件管理器的几种实现方式原理篇</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;浅谈Android文件管理器的几种实现方式（源码篇）&quot;&gt;&lt;a href=&quot;#浅谈Android文件管理器的几种实现方式（源码篇）&quot; class=&quot;headerlink&quot; title=&quot;浅谈Android文件管理器的几种实现方式（源码篇）&quot;&gt;&lt;/a&gt;浅谈Androi
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>控制日志输出</title>
-    <link href="https://hackergeek.github.io/2018/03/31/%E6%8E%A7%E5%88%B6%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA/"/>
-    <id>https://hackergeek.github.io/2018/03/31/控制日志输出/</id>
-    <published>2018-03-31T15:09:52.704Z</published>
-    <updated>2018-05-30T13:06:28.560Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。</p><ul><li>去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。</li><li>不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</li></ul><h2 id="控制日志输出"><a href="#控制日志输出" class="headerlink" title="控制日志输出"></a>控制日志输出</h2><p>我们可以通过使用控制语句来控制日志输出，下面的代码分别使用布尔型常量和布尔型变量来控制日志输出：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2018/03/31/控制日志输出/Main.java.png" alt="Main.java" title="">                </div>                <div class="image-caption">Main.java</div>            </figure><p>那么<strong>使用布尔型常量和布尔型变量控制日志输出有什么区别</strong>呢？<br>于是，我就去查看Main.java编译生成的字节码（进行反编译处理之后的字节码），如下图：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2018/03/31/控制日志输出/Main.class.png" alt="Main.class" title="">                </div>                <div class="image-caption">Main.class</div>            </figure><p>将编译生成的字节码和源码进行对比，你会发现由于DEBUG常量的值为true，也就是说第11行else语句块永远都不会执行，因此Java编译器就将它忽略掉，最终第9-13行的java代码编译生成第16行的字节码。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从上面的分析，我们可以得出以下结论：</p><ol><li>Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。</li><li>尽量使用静态布尔型常量来控制日志输出。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><ul><li>基本文件操作：新建、复制、粘贴、剪切和删除等操作</li><li>文件检索</li><li>文件收藏</li><li>文件分类</li><li>添加桌面快捷方式</li><li>主题换色</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p> <img src="/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/文件管理器效果图.gif" width="400" height="600" alt="图片名称" align="center"></p><h2 id="Android简单文件管理器源码"><a href="#Android简单文件管理器源码" class="headerlink" title="Android简单文件管理器源码"></a><a href="https://github.com/Hackergeek/SimpleExplorer2" title="Android简单文件管理器源码" target="_blank" rel="noopener">Android简单文件管理器源码</a></h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/6e51a11a52d9" title="浅谈Android文件管理器的几种实现方式" target="_blank" rel="noopener">浅谈Android文件管理器的几种实现方式原理篇</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用
+        &lt;h2 id=&quot;功能实现&quot;&gt;&lt;a href=&quot;#功能实现&quot; class=&quot;headerlink&quot; title=&quot;功能实现&quot;&gt;&lt;/a&gt;功能实现&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本文件操作：新建、复制、粘贴、剪切和删除等操作&lt;/li&gt;
+&lt;li&gt;文件检索&lt;/li&gt;
+&lt;li&gt;文件收藏&lt;/li
       
     
     </summary>
     
-      <category term="Android" scheme="https://hackergeek.github.io/categories/Android/"/>
-    
-    
-      <category term="Java" scheme="https://hackergeek.github.io/tags/Java/"/>
-    
-      <category term="Android" scheme="https://hackergeek.github.io/tags/Android/"/>
     
   </entry>
   
@@ -82,6 +58,33 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>控制日志输出</title>
+    <link href="https://hackergeek.github.io/2018/03/31/%E6%8E%A7%E5%88%B6%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA/"/>
+    <id>https://hackergeek.github.io/2018/03/31/控制日志输出/</id>
+    <published>2018-03-30T16:00:00.000Z</published>
+    <updated>2018-05-30T13:17:59.641Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用于输出日志的无用代码。</p><ul><li>去掉的话，又担心当程序出问题的时候，又要重新加入那些代码来调试，而且删除输出日志的代码也不是一件轻松的事情。</li><li>不去掉的话，那些输出日志的代码在程序没出问题的情况下又会显得有点多余。</li></ul><h2 id="控制日志输出"><a href="#控制日志输出" class="headerlink" title="控制日志输出"></a>控制日志输出</h2><p>我们可以通过使用控制语句来控制日志输出，下面的代码分别使用布尔型常量和布尔型变量来控制日志输出：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2018/03/31/控制日志输出/Main.java.png" alt="Main.java" title="">                </div>                <div class="image-caption">Main.java</div>            </figure><p>那么<strong>使用布尔型常量和布尔型变量控制日志输出有什么区别</strong>呢？<br>于是，我就去查看Main.java编译生成的字节码（进行反编译处理之后的字节码），如下图：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2018/03/31/控制日志输出/Main.class.png" alt="Main.class" title="">                </div>                <div class="image-caption">Main.class</div>            </figure><p>将编译生成的字节码和源码进行对比，你会发现由于DEBUG常量的值为true，也就是说第11行else语句块永远都不会执行，因此Java编译器就将它忽略掉，最终第9-13行的java代码编译生成第16行的字节码。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从上面的分析，我们可以得出以下结论：</p><ol><li>Java编译器在将java代码编译成java字节码的时候，会忽略掉那些永远都不可能执行的代码。</li><li>尽量使用静态布尔型常量来控制日志输出。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;在编写代码的时候，我们常常需要加入一些代码来输出日志，从而达到调试的目的。但是，当程序基本编写完成的时候，我们就会纠结于究竟要不要去掉那些用
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://hackergeek.github.io/categories/Android/"/>
+    
+    
+      <category term="Java" scheme="https://hackergeek.github.io/tags/Java/"/>
+    
+      <category term="Android" scheme="https://hackergeek.github.io/tags/Android/"/>
     
   </entry>
   
