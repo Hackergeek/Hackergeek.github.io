@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hackergeek.github.io/"/>
-  <updated>2018-05-30T13:07:12.685Z</updated>
+  <updated>2018-05-30T13:12:26.924Z</updated>
   <id>https://hackergeek.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hackergeek.github.io/2018/04/14/%E6%B5%85%E8%B0%88Android%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%EF%BC%88%E6%BA%90%E7%A0%81%E7%AF%87%EF%BC%89/"/>
     <id>https://hackergeek.github.io/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/</id>
     <published>2018-04-14T08:36:44.241Z</published>
-    <updated>2018-05-30T13:07:12.685Z</updated>
+    <updated>2018-05-30T13:12:26.924Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="浅谈Android文件管理器的几种实现方式（源码篇）"><a href="#浅谈Android文件管理器的几种实现方式（源码篇）" class="headerlink" title="浅谈Android文件管理器的几种实现方式（源码篇）"></a>浅谈Android文件管理器的几种实现方式（源码篇）</h1><h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><ul><li>基本文件操作：新建、复制、粘贴、剪切和删除等操作</li><li>文件检索</li><li>文件收藏</li><li>文件分类</li><li>添加桌面快捷方式</li><li>主题换色</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/文件管理器效果图.gif" alt="文件列表" title="">                </div>                <div class="image-caption">文件列表</div>            </figure><h2 id="Android简单文件管理器源码"><a href="#Android简单文件管理器源码" class="headerlink" title="Android简单文件管理器源码"></a><a href="https://github.com/Hackergeek/SimpleExplorer2" title="Android简单文件管理器源码" target="_blank" rel="noopener">Android简单文件管理器源码</a></h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/6e51a11a52d9" title="浅谈Android文件管理器的几种实现方式" target="_blank" rel="noopener">浅谈Android文件管理器的几种实现方式原理篇</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="浅谈Android文件管理器的几种实现方式（源码篇）"><a href="#浅谈Android文件管理器的几种实现方式（源码篇）" class="headerlink" title="浅谈Android文件管理器的几种实现方式（源码篇）"></a>浅谈Android文件管理器的几种实现方式（源码篇）</h1><h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><ul><li>基本文件操作：新建、复制、粘贴、剪切和删除等操作</li><li>文件检索</li><li>文件收藏</li><li>文件分类</li><li>添加桌面快捷方式</li><li>主题换色</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p> <img src="/2018/04/14/浅谈Android文件管理器的几种实现方式（源码篇）/文件管理器效果图.gif" width="400" height="600" alt="图片名称" align="center"></p><h2 id="Android简单文件管理器源码"><a href="#Android简单文件管理器源码" class="headerlink" title="Android简单文件管理器源码"></a><a href="https://github.com/Hackergeek/SimpleExplorer2" title="Android简单文件管理器源码" target="_blank" rel="noopener">Android简单文件管理器源码</a></h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/6e51a11a52d9" title="浅谈Android文件管理器的几种实现方式" target="_blank" rel="noopener">浅谈Android文件管理器的几种实现方式原理篇</a></p>]]></content>
     
     <summary type="html">
     
